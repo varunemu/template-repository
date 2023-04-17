@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Get Branch Name
+BRANCH=$(git rev-parse --abbrev-ref HEAD)
+
+# Regex which has to be followed when creating branches on this repo.
+REGEX="^(((feat(ure)?|enh(ancement)?|bug|hotfix|test|chore)\/.*))$"
+
+if ! [[ $BRANCH =~ $REGEX ]]; then
+  >&2 printf "error: %s\n\n%s\n\n" "Your branch was rejected due to invalid naming convention." "Please rename your branch with $REGEX syntax compliance."
+  exit 1
+fi

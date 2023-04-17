@@ -1,0 +1,40 @@
+name: Bug Report
+description: Report a non-security sensitive bug in this repository
+labels: ["bug"]
+body:
+  - type: textarea
+    attributes:
+      label: Expected behavior
+      description: Describe the expected behavior clearly and concisely.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Actual behavior
+      description: Describe the actual behavior clearly and concisely.
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Errorneuos Tag/Release of this Repository
+      description: Which tag/release of this GitHub repository are you seeing this bug in?
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: How to Reproduce?
+      description: Provide clear and concise steps to reproduce the problem.
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: Environment Details
+      description: Which GitHub Tag/Release are you using? Details of your test system (OS, version, network, etc)? Any other environment related information?
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: Anything else?
+      description: Links? References? Anything that will give us more context about the issue you are encountering!
+    validations:
+      required: false
