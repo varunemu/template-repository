@@ -13,7 +13,7 @@ repository:
   homepage: https://github.com/varun-charan/template-repository
 
   # A comma-separated list of topics to set on the repository
-  topics: test
+  # topics: test
 
   # Either `true` to make the repository private, or `false` to make it public.
   private: true
@@ -133,10 +133,6 @@ branches:
         dismiss_stale_reviews: true
         # Blocks merge until code owners have reviewed.
         require_code_owner_reviews: false
-        # Specify which users and teams can dismiss pull request reviews. Pass an empty dismissal_restrictions object to disable. User and team dismissal_restrictions are only available for organization-owned repositories. Omit this parameter for personal repositories.
-        dismissal_restrictions:
-          users: []
-          teams: []
       # Required. Require status checks to pass before merging. Set to null to disable
       required_status_checks:
         # Required. Require branches to be up to date before merging.
@@ -147,8 +143,3 @@ branches:
       enforce_admins: false
       # Prevent merge commits from being pushed to matching branches
       required_linear_history: true
-      # Required. Restrict who can push to this branch. Team and user restrictions are only available for organization-owned repositories. Set to null to disable.
-      restrictions:
-        apps: []
-        users: []
-        teams: []
